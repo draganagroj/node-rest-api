@@ -2,15 +2,17 @@
   "name": "rest-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "export NODE_ENV=test || SET NODE_ENV=\"test\" && mocha test/*.test.js",
+    "test-watch": "nodemon --exec \"npm test\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
+    "lodash": "^4.17.4",
     "mongod": "^2.0.0",
     "mongoose": "^4.11.6"
   },
